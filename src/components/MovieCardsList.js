@@ -43,7 +43,7 @@ export const MovieCardsList = (props) => {
 			</div>
 		);
 	
-	if(movies && movies.length === 0 && !loading)
+	if((movies && movies.length === 0 && !loading) || (urlArr[3] && urlArr[3] === Favourites && !movies))
 		movieList = (
 			<div className={"list_errorText" + favClass}>
 				List is empty!

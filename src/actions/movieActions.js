@@ -5,7 +5,7 @@ export const FETCH_MOVIES_FAILURE = 'FETCH_MOVIES_FAILURE';
 export const FAV_MOVIE_LIST = 'FAV_MOVIE_LIST';
 export const MOVIE_DETAILS_SUCCESS = 'MOVIE_DETAILS_SUCCESS';
 // user url set
-const OmdbUrl = `http://www.omdbapi.com/?apikey=fc32c816`;
+const OmdbUrl = `https://www.omdbapi.com/?apikey=fc32c816`;
 const ALL = 'All';
 
 export const fetchMoviesBegin = () => ({
