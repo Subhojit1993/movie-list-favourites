@@ -36,17 +36,16 @@ export const MovieCardsList = (props) => {
 			);
 		})
 	}
-	else if(error !== null)
-		movieList = (
-			<div className="list_errorText">
-				{error}
-			</div>
-		);
-	
 	if((movies && movies.length === 0 && !loading) || (urlArr[3] && urlArr[3] === Favourites && !movies))
 		movieList = (
 			<div className={"list_errorText" + favClass}>
 				List is empty!
+			</div>
+		);
+	if((error && error !== null && error !== "") && !urlArr[3])
+		movieList = (
+			<div className="list_errorText">
+				{error}
 			</div>
 		);
 	return(

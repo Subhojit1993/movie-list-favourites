@@ -100,14 +100,16 @@ export default function userReducer(state = initialState, action) {
         ...state,
         list: movieList,
         movieData: {},
-        favList: updatedList
+        favList: updatedList,
+        error: null
       };
 
     case MOVIE_DETAILS_SUCCESS:
       // get movie details
       return {
         ...state,
-        movieData: {...action.payload}
+        movieData: {...action.payload},
+        error: null
       };
 
     case FETCH_MOVIES_FAILURE:
